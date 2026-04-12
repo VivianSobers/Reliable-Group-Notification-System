@@ -14,15 +14,12 @@ seq = 0
 udp_sock = None
 event_callback = None
 
-
 def emit(event_type, data):
     if event_callback:
         event_callback({"event": event_type, "data": data})
 
-
 def encrypt(data):
     return bytes(data[i] ^ SECRET_KEY[i % len(SECRET_KEY)] for i in range(len(data)))
-
 
 def ssl_handshake_server():
     context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
@@ -37,7 +34,6 @@ def ssl_handshake_server():
         secure_conn.sendall(SECRET_KEY)
         secure_conn.close()
         print(f"Gave session key to {addr[0]}")
-
 
 def send_to_everyone(sock, message):
     global seq
@@ -56,7 +52,6 @@ def send_to_everyone(sock, message):
         sock.sendto(data, addr)
         threading.Timer(2.0, check_ack, args=[sock, seq, addr]).start()
 
-
 def check_ack(sock, seq_num, addr):
     msg = messages_sent.get(seq_num)
     if not msg or addr in msg["acks"]:
@@ -73,16 +68,13 @@ def check_ack(sock, seq_num, addr):
     sock.sendto(msg["data"], addr)
     threading.Timer(2.0, check_ack, args=[sock, seq_num, addr]).start()
 
-
 def handle_incoming(sock, data, addr):
     text = encrypt(data).decode()
     parts = text.split("|")
-
     if parts[0] == "JOIN":
         subscribers[addr] = parts[1]
         print(f"{parts[1]} joined the group")
         emit("JOIN", {"name": parts[1], "addr": f"{addr[0]}:{addr[1]}", "total": len(subscribers)})
-
     elif parts[0] == "LEAVE":
         name = subscribers.pop(addr, "someone")
         print(f"{name} left the group")
@@ -102,12 +94,10 @@ def handle_incoming(sock, data, addr):
                 emit("COMPLETE", {"seq": num})
                 del messages_sent[num]
 
-
 def listen_for_packets(sock):
     while True:
         data, addr = sock.recvfrom(65536)
         threading.Thread(target=handle_incoming, args=[sock, data, addr]).start()
-
 
 if __name__ == "__main__":
     threading.Thread(target=ssl_handshake_server, daemon=True).start()
