@@ -1,5 +1,15 @@
 # Reliable Group Notification System
 
+![Protocol](https://img.shields.io/badge/Protocol-UDP%20Reliable%20Messaging-1E90FF?style=for-the-badge)
+![Security](https://img.shields.io/badge/Security-SSL%20Handshake-228B22?style=for-the-badge)
+![Encryption](https://img.shields.io/badge/Transport-Encrypted%20Packets-6A5ACD?style=for-the-badge)
+![Reliability](https://img.shields.io/badge/Reliability-ACK%20%2B%20Retransmission-success?style=for-the-badge)
+![Heartbeat](https://img.shields.io/badge/Heartbeat-Liveness%20Detection-DC143C?style=for-the-badge)
+![Architecture](https://img.shields.io/badge/Architecture-Pub%2FSub%20Group%20Messaging-FF8C00?style=for-the-badge)
+![Dashboard](https://img.shields.io/badge/Frontend-Real--time%20Dashboard-8A2BE2?style=for-the-badge)
+![Language](https://img.shields.io/badge/Language-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Fault%20Tolerant-brightgreen?style=for-the-badge)
+
 1. Subscribers connect to the server via SSL to get a session key
 2. Server sends notifications over UDP to all active subscribers
 3. Each subscriber sends an ACK back when they receive a message
