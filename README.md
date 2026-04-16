@@ -1,15 +1,15 @@
 # Reliable Group Notification System
 
-![Protocol](https://img.shields.io/badge/Protocol-UDP%20Reliable%20Messaging-1E90FF?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-SSL%20Handshake-228B22?style=for-the-badge)
-![Encryption](https://img.shields.io/badge/Transport-Encrypted%20Packets-6A5ACD?style=for-the-badge)
-![Reliability](https://img.shields.io/badge/Reliability-ACK%20%2B%20Retransmission-success?style=for-the-badge)
-![Heartbeat](https://img.shields.io/badge/Heartbeat-Liveness%20Detection-DC143C?style=for-the-badge)
-![Architecture](https://img.shields.io/badge/Architecture-Pub%2FSub%20Group%20Messaging-FF8C00?style=for-the-badge)
-![Dashboard](https://img.shields.io/badge/Frontend-Real--time%20Dashboard-8A2BE2?style=for-the-badge)
-![Language](https://img.shields.io/badge/Language-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Fault%20Tolerant-brightgreen?style=for-the-badge)
-[![License](https://img.shields.io/badge/License-Apache_2.0-004D40?style=for-the-badge)](https://opensource.org/licenses/MIT)
+![Protocol](https://img.shields.io/badge/Protocol-UDP%20Reliable%20Messaging-1565C0?style=for-the-badge&labelColor=42A5F5)
+![Security](https://img.shields.io/badge/Security-SSL%20Handshake-6A1B9A?style=for-the-badge&labelColor=AB47BC)
+![Encryption](https://img.shields.io/badge/Transport-Encrypted%20Packets-B8860B?style=for-the-badge&labelColor=FFD54F)
+![Reliability](https://img.shields.io/badge/Reliability-ACK%20%2B%20Retransmission-2E7D32?style=for-the-badge&labelColor=66BB6A)
+![Heartbeat](https://img.shields.io/badge/Heartbeat-Liveness%20Detection-B71C1C?style=for-the-badge&labelColor=EF5350)
+![Architecture](https://img.shields.io/badge/Architecture-Pub%2FSub%20Group%20Messaging-E65100?style=for-the-badge&labelColor=FF9800)
+![Dashboard](https://img.shields.io/badge/Frontend-Real--time%20Dashboard-512DA8?style=for-the-badge&labelColor=9575CD)
+![Language](https://img.shields.io/badge/Language-Python-1C1C1C?style=for-the-badge&logo=python&logoColor=FFD700&labelColor=424242)
+![Status](https://img.shields.io/badge/Status-Fault%20Tolerant-00897B?style=for-the-badge&labelColor=26A69A)
+[![License](https://img.shields.io/badge/License-Apache_2.0-37474F?style=for-the-badge&labelColor=607D8B)](https://opensource.org/licenses/MIT)
 
 1. Subscribers connect to the server via SSL to get a session key
 2. Server sends notifications over UDP to all active subscribers
