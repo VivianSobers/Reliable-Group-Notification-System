@@ -9,6 +9,7 @@
 ![Dashboard](https://img.shields.io/badge/Frontend-Real--time%20Dashboard-8A2BE2?style=for-the-badge)
 ![Language](https://img.shields.io/badge/Language-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Fault%20Tolerant-brightgreen?style=for-the-badge)
+[![License](https://img.shields.io/badge/License-Apache_2.0-004D40?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 1. Subscribers connect to the server via SSL to get a session key
 2. Server sends notifications over UDP to all active subscribers
