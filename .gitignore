@@ -18,3 +18,7 @@ Thumbs.db
 
 # Logs
 *.log
+# TLS material: generate locally, never commit
+certs/
+*.key
+*.pem
